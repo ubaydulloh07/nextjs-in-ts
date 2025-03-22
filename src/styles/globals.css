@@ -49,6 +49,14 @@ body {
   color: #666;
 }
 
+.buy-button {
+  background-color: #556b2f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
 @media (max-width: 768px) {
   .content-grid {
     grid-template-columns: 1fr;
