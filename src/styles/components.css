@@ -1,17 +1,18 @@
 /* Header styles */
 .header {
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 0 1rem;
 }
 
 .header-content {
@@ -19,7 +20,6 @@
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
-  justify-content: space-between;
 }
 
 .logo {
@@ -80,43 +80,6 @@
   outline: none;
   border-color: #556b2f;
   box-shadow: 0 0 0 2px rgba(85, 107, 47, 0.1);
-}
-
-.cart-container {
-  position: relative;
-}
-
-.cart-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #556b2f;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.cart-button:hover {
-  background-color: #4c612a;
-}
-
-.cart-count {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ff4d4d;
-  color: white;
-  font-size: 0.8rem;
-  font-weight: bold;
-  min-width: 20px;
-  height: 20px;
-  padding: 0 6px;
-  border-radius: 10px;
-  margin-left: 4px;
 }
 
 /* Product Card styles */
@@ -224,23 +187,6 @@
   overflow: hidden;
 }
 
-.buy-button {
-  background-color: #556b2f;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 15px;
-  font-weight: 500;
-  transition: background-color 0.2s;
-}
-
-.buy-button:hover {
-  background-color: #4c612a;
-}
-
 /* Loading styles */
 .loading-container {
   display: flex;
@@ -301,28 +247,6 @@
   .sort-group {
     width: 100%;
   }
-}
-
-.product-link {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  display: block;
-}
-
-.product-link:hover .product-image {
-  transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
-}
-
-.product-title-link {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
-.product-title-link:hover .product-title {
-  color: #556b2f;
 }
 
 /* Product Detail Page Styles */

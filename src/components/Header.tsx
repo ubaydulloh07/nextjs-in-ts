@@ -4,10 +4,9 @@ import Link from 'next/link';
 interface HeaderProps {
   onSearch: (query: string) => void;
   onSort: (type: 'price' | 'rating', order: 'asc' | 'desc') => void;
-  cartCount: number;
 }
 
-export default function Header({ onSearch, onSort, cartCount }: HeaderProps) {
+export default function Header({ onSearch, onSort }: HeaderProps) {
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     onSearch(e.target.value);
   };
@@ -60,12 +59,6 @@ export default function Header({ onSearch, onSort, cartCount }: HeaderProps) {
                 <option value="rating-asc">Past reytingdan</option>
               </select>
             </div>
-          </div>
-          <div className="cart-container">
-            <button className="cart-button">
-              🛒 Savatcha
-              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-            </button>
           </div>
         </div>
       </div>

@@ -10,7 +10,6 @@ const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [cartCount, setCartCount] = useState(0);
   const [sortConfig, setSortConfig] = useState<{
     type: 'price' | 'rating' | null;
     order: 'asc' | 'desc' | null;
@@ -79,10 +78,6 @@ const Home: NextPage = () => {
     setSortConfig({ type, order });
   };
 
-  const handleAddToCart = () => {
-    setCartCount(prev => prev + 1);
-  };
-
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
   const startIndex = (currentPage - 1) * productsPerPage;
   const endIndex = startIndex + productsPerPage;
@@ -98,16 +93,12 @@ const Home: NextPage = () => {
 
   return (
     <div className="app-container">
-      <Header onSearch={handleSearch} onSort={handleSort} cartCount={cartCount} />
+      <Header onSearch={handleSearch} onSort={handleSort} />
       
       <main className="main-content">
         <div className="product-grid">
           {currentProducts.map(product => (
-            <ProductCard 
-              key={product.id} 
-              product={product} 
-              onAddToCart={handleAddToCart}
-            />
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
 

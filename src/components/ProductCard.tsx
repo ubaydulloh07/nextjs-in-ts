@@ -4,10 +4,9 @@ import { Product } from '@/types/product';
 
 interface ProductCardProps {
   product: Product;
-  onAddToCart: () => void;
 }
 
-const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
+const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Link href={`/product/${product.id}`} className="product-card-link">
       <div className="product-card">
@@ -39,15 +38,6 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
               <span className="label">Tavsif:</span> {product.description}
             </div>
           </div>
-          <button 
-            className="buy-button" 
-            onClick={(e) => {
-              e.preventDefault(); // Link bosilishini to'xtatish
-              onAddToCart();
-            }}
-          >
-            Savatchaga qo'shish
-          </button>
         </div>
       </div>
     </Link>
