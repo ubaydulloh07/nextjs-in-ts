@@ -6,10 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Online Do\'kon',
-  description: 'Online do\'kon mahsulotlari',
-  icons: {
-    icon: '/logo.png'
-  }
+  description: 'Online do\'kon mahsulotlari'
 }
 
 export default function RootLayout({
