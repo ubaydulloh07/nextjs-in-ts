@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Next.js TypeScript Online Shop
+
+This is a Next.js project with TypeScript for an online shop.
 
 ## Getting Started
 
@@ -6,17 +8,25 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Features
+
+- Product listing
+- Product search
+- Sort by price and rating
+- Product details page
+- Responsive design
+
+## Technologies Used
+
+- Next.js 14
+- TypeScript
+- React 18
+- CSS Modules
 
 [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
